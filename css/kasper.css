@@ -1,6 +1,7 @@
 /* Start variable */
 :root {
     --main-color: #19c8fa;
+    --transparent-color: rgb(15 116 143 / 70%);
 }
 
 /* End variable */
@@ -17,6 +18,15 @@ html {
 body {
     font-family: "Open Sans", sans-serif;
     background-color: #ddd;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
 }
 
 ul,
@@ -58,6 +68,7 @@ li {
     position: absolute;
     left: 0;
     width: 100%;
+    z-index: 1;
 }
 
 .header .container {
@@ -177,3 +188,101 @@ li {
 }
 
 /* End header section */
+
+/* Start landing section */
+.landing {
+    min-height: 100vh;
+    background-image: url('../images/landing.jpg');
+    background-size: cover;
+    position: relative;
+}
+
+.landing .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 60%);
+}
+
+.landing .text {
+    width: 50%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    padding: 50px;
+    background-color: var(--transparent-color);
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media (max-width:767px) {
+    .landing .text {
+        width: 100%;
+    }
+}
+
+.landing .text .content {
+    max-width: 500px;
+}
+
+@media (max-width: 767px) {
+    .landing .text .content {
+        max-width: 100%;
+    }
+}
+
+.landing .text .content h2 {
+    font-size: 32px;
+    font-weight: normal;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.landing .text .content p {
+    font-size: 14px;
+    line-height: 2;
+}
+
+.landing i {
+    color: #ddd;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@media (max-width: 767px) {
+    .landing i {
+        display: none;
+    }
+}
+
+.landing i:nth-of-type(1) {
+    left: 30px;
+}
+
+.landing i:nth-of-type(2) {
+    right: 30px;
+}
+
+.landing .bullets {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+}
+
+.landing .bullets div {
+    width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.landing .bullets div:nth-child(2) {
+    background-color: var(--main-color);
+}
+
+/* End landing section */
