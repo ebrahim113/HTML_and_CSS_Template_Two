@@ -70,6 +70,8 @@ li {
 /* Start components */
 .overlay {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background-color: rgb(0 0 0 / 60%);
@@ -608,3 +610,60 @@ li {
 }
 
 /* End about us section */
+
+/* Start stats section */
+.stats {
+    text-align: center;
+    padding: var(--section-padding) 0;
+    background-image: url('');
+    background-size: cover;
+    position: relative;
+}
+
+.stats .container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.stats .container .stat {
+    color: white;
+    padding: 50px;
+    background-color: var(--transparent-color);
+    flex-basis: 25%;
+}
+
+@media (max-width: 767px) {
+    .stats .container .stat {
+        flex-basis: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .stats .container .stat {
+        flex-basis: 50%;
+    }
+}
+
+.stats .container .stat i {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border-radius: 50%;
+    margin: 0 auto 30px;
+}
+
+.stats .container .stat div {
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0 0 20px;
+}
+
+.stats .container .stat p {
+    font-size: 14px;
+}
+
+/* End stats section */
