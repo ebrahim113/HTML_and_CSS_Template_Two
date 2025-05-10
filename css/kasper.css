@@ -465,28 +465,28 @@ li {
     color: white;
 }
 
-.portfolio .container .portfolio-content {
+.portfolio .portfolio-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     overflow: hidden;
     margin-top: 60px;
 }
 
-.portfolio .container .portfolio-content .box {
+.portfolio .portfolio-content .box {
     position: relative;
     overflow: hidden;
 }
 
-.portfolio .container .portfolio-content .box .image img {
+.portfolio .portfolio-content .box .image img {
     max-width: 100%;
     transition: var(--transition-duration);
 }
 
-.portfolio .container .portfolio-content .box:hover .image img {
+.portfolio .portfolio-content .box:hover .image img {
     transform: rotate(3deg) scale(1.1);
 }
 
-.portfolio .container .portfolio-content .box .caption {
+.portfolio .portfolio-content .box .caption {
     width: 100%;
     padding: 20px;
     background-color: white;
@@ -496,20 +496,20 @@ li {
     transition: var(--transition-duration);
 }
 
-.portfolio .container .portfolio-content .box:hover .caption {
+.portfolio .portfolio-content .box:hover .caption {
     transform: translateY(0);
 }
 
-.portfolio .container .portfolio-content .box .caption h4 {
+.portfolio .portfolio-content .box .caption h4 {
     font-weight: normal;
     margin-bottom: 10px;
 }
 
-.portfolio .container .portfolio-content .box .caption p {
+.portfolio .portfolio-content .box .caption p {
     color: var(--main-color);
 }
 
-.portfolio .container a {
+.portfolio a {
     display: block;
     width: fit-content;
     padding: 15px 20px;
