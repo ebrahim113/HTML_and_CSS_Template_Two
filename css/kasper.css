@@ -802,3 +802,27 @@ li {
 }
 
 /* End skills section */
+
+/* Start quote section */
+.quote {
+    padding: var(--section-padding) 0;
+    text-align: center;
+    background-image: url('../images/quote.jpg');
+    background-size: cover;
+    color: white;
+    position: relative;
+}
+
+.quote .container {
+    position: relative;
+}
+
+.quote .container q {
+    display: block;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.quote span {}
+
+/* End quote section */
