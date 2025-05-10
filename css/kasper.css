@@ -5,6 +5,7 @@
     --paragraph-line-height: 2;
     --section-padding: 100px;
     --paragrpah-color: #777;
+    --transition-duration: .3s;
 }
 
 /* End variable */
@@ -20,7 +21,6 @@ html {
 
 body {
     font-family: "Open Sans", sans-serif;
-    background-color: #ddd;
 }
 
 h1,
@@ -211,7 +211,7 @@ li {
     text-decoration: none;
     color: white;
     position: relative;
-    transition: .3s;
+    transition: var(--transition-duration);
     z-index: 2;
 }
 
@@ -444,3 +444,80 @@ li {
 }
 
 /* End design section */
+
+/* Start portfolio section */
+.portfolio {
+    padding: var(--section-padding) 0;
+}
+
+.portfolio .container ul {
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio .container ul li {
+    padding: 10px;
+    text-transform: capitalize;
+}
+
+.portfolio .container ul li:first-of-type {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.portfolio .container .portfolio-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    overflow: hidden;
+    margin-top: 60px;
+}
+
+.portfolio .container .portfolio-content .box {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio .container .portfolio-content .box .image img {
+    max-width: 100%;
+    transition: var(--transition-duration);
+}
+
+.portfolio .container .portfolio-content .box:hover .image img {
+    transform: rotate(3deg) scale(1.1);
+}
+
+.portfolio .container .portfolio-content .box .caption {
+    width: 100%;
+    padding: 20px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(100%);
+    transition: var(--transition-duration);
+}
+
+.portfolio .container .portfolio-content .box:hover .caption {
+    transform: translateY(0);
+}
+
+.portfolio .container .portfolio-content .box .caption h4 {
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.portfolio .container .portfolio-content .box .caption p {
+    color: var(--main-color);
+}
+
+.portfolio .container a {
+    display: block;
+    width: fit-content;
+    padding: 15px 20px;
+    margin: 30px auto;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: var(--main-color);
+}
+
+/* End portfolio section */
