@@ -1103,3 +1103,41 @@ a {
 }
 
 /* End contact us section */
+
+/* Start footer section */
+footer {
+    position: relative;
+    padding: calc(var(--section-padding) / 2) 0;
+    background-image: url('../images/subscribe.jpg');
+    background-size: cover;
+    color: white;
+    text-align: center;
+}
+
+footer .container {
+    position: relative;
+}
+
+footer .container img {
+    margin-bottom: 20px;
+}
+
+footer .container p {
+    width: fit-content;
+    padding: 20px;
+    margin: 20px auto;
+    font-size: 22px;
+    text-transform: uppercase;
+    border-bottom: 1px solid white;
+}
+
+footer .container .social i {
+    padding: 10px 15px;
+}
+
+footer .container>div:last-child {
+    margin-top: 60px;
+    text-transform: capitalize;
+}
+
+/* End footer section */
