@@ -1141,3 +1141,25 @@ footer .container>div:last-child {
 }
 
 /* End footer section */
+
+
+/* To top button */
+.to-top {
+    text-decoration: none;
+    position: fixed;
+    bottom: 50px;
+    right: 25px;
+    border: 15px solid var(--main-color);
+    border-color: transparent transparent var(--main-color);
+}
+
+.to-top::after {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    width: 10px;
+    height: 20px;
+    transform: translate(-50%, 200%);
+    background-color: var(--main-color);
+}
