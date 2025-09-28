@@ -1,0 +1,157 @@
+/* Start variables */
+:root {
+	--main-color: #19c8fa;
+}
+/* End variables */
+
+/* Start global rules */
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: #000;
+	font-family: "Work Sans", sans-serif;
+	min-height: 5000px;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End global rules */
+
+/* Start header */
+header {
+	position: sticky;
+	top: 0;
+}
+
+header .container {
+	height: 97px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+}
+
+header .container::after {
+	content: "";
+	position: absolute;
+	bottom: 0px;
+	left: 15px;
+	background-color: #a2a2a2;
+	width: calc(100% - 30px);
+	height: 1px;
+}
+
+header .container img {
+	height: 40px; 
+}
+
+header .container nav {
+	display: flex;
+	align-items: center;
+}
+
+header .container nav>i {
+	font-size: 22px;
+	color: #fff;
+	display: none;
+	cursor: pointer;
+}
+
+@media (max-width: 767px) {
+	header .container nav>i {
+		display: block;
+	}
+}
+
+header .container nav ul {
+	display: flex;
+}
+
+@media (max-width: 767px) {
+	header .container nav ul {
+		flex-direction: column;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		transform: translateX(15px);
+		background-color: rgb(0 0 0 / 50%);
+		width: calc(100% - 30px);
+		display: none;
+	}
+}
+
+header .container nav ul li a {
+	display: block;
+	padding: 40px 10px;
+	color: #fff;
+	font-size: 14px;
+	text-decoration: none;
+	position: relative;
+	z-index: 1;
+	transition: .3s;
+}
+ 
+header .container nav ul li a.active,
+header .container nav ul li a:hover {
+	color: var(--main-color);
+	border-bottom: 1px solid var(--main-color);
+}
+
+@media (max-width: 767px) {
+	header .container nav ul li a {
+		padding: 15px;
+	}
+}
+
+header .container nav .search {
+	width: 40px;
+	height: 30px;
+	margin-left: 30px;
+	border-left: 1px solid #fff;
+	position: relative;
+}
+
+header .container nav .search i {
+	font-size: 20px;
+	color: #fff;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+}
+
+/* End header */
