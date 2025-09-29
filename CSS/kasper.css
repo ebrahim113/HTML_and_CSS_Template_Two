@@ -570,3 +570,74 @@ header .container nav .search i {
 	}
 }
 /* End about */
+
+/* Start stats */
+.stats::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(0 0 0 / 70%);
+}
+
+.stats {
+	background-image: url('../images/stats.png');
+	background-size: cover;
+	position: relative;
+	padding: var(--section-padding) 0;
+	text-align: center;
+}
+
+.stats .container {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.stats .container .stat {
+	color: #fff;
+	background-color: var(--transparent-color);
+	padding: 50px;
+}
+
+@media (max-width: 767px) {
+	.stats .container .stat {
+		flex-basis: 100%;
+	}
+}
+
+@media (min-width: 768px) {
+	.stats .container .stat {
+		flex-basis: 50%;
+	}
+}
+
+@media (min-width: 992px) {
+	.stats .container .stat {
+		flex-basis: 25%;
+	}
+}
+
+.stats .container .stat i {
+	background-color: #000;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto 30px;
+}
+
+.stats .container .stat p:first-of-type {
+	font-size: 50px;
+	font-weight: bold;
+	margin: 0 0 20px;
+}
+
+.stats .container .stat p:last-of-type {
+	font-size: 14px;
+}
+/* End stats */
