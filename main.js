@@ -4,6 +4,8 @@ const menu = document.querySelector("nav ul");
 
 const links = menu.querySelectorAll("li a");
 
+document.querySelector("footer span:first-of-type").textContent = new Date().getFullYear();
+
 let isOpened = false;
 
 bars.addEventListener('click', (e) => {
