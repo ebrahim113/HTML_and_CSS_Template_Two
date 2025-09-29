@@ -808,3 +808,97 @@ header .container nav .search i {
 	display: block;
 }
 /* End quote */
+
+/* Start pricing */
+.pricing {
+	padding: var(--section-padding) 0;
+}
+
+.pricing .container .plans {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	gap: 30px;
+}
+
+.pricing .container .plans .plan {
+	background-color: #fcfcfc;
+	text-align: center;
+}
+
+.pricing .container .plans .plan .head {
+	padding: 40px 20px;
+	border-top: 1px solid var(--main-color);
+	border-bottom: 1px solid var(--main-color);
+}
+
+.pricing .container .plans .plan .head h3 {
+	font-weight: normal;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+
+.pricing .container .plans .plan .head .price::before {
+	content: "$";
+	font-size: 25px;
+	font-weight: normal;
+	position: relative;
+	top: -40px;
+	margin-right: 15px;
+}
+
+.pricing .container .plans .plan .head .price {
+	font-size: 60px;
+	font-weight: bold;
+}
+
+.pricing .container .plans .plan .head .price::after {
+	content: "/Mo";
+	font-size: 20px;
+	position: relative;
+	right: -15px;
+}
+
+.pricing .container .plans .plan ul {
+	border-bottom: 1px solid var(--main-color);
+}
+
+.pricing .container .plans .plan ul li {
+	padding: 20px;
+	position: relative;
+}
+
+.pricing .container .plans .plan ul li:not(:last-child)::after {
+	content: "";
+	background-color: var(--main-color);
+	width: 140px;
+	height: 1px;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.pricing .container .plans .plan button {
+	border: 1px solid var(--main-color);
+	padding: 20px;
+	margin: 30px auto;
+	cursor: pointer;
+}
+
+.pricing .container .special {
+	font-size: 20px;
+	text-align: center;
+	margin: 50px auto 20px;
+}
+
+.pricing .container .special button {
+	color: #fff;
+	background-color: var(--main-color);
+	display: block;
+	width: fit-content;
+	padding: 15px 30px;
+	margin: 20px auto;
+	cursor: pointer;
+	border: none;
+}
+/* End pricing */
