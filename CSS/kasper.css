@@ -927,7 +927,7 @@ header .container nav .search i {
 	position: relative;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
 	.subscribe .container {
 		flex-direction: column;
 	}
@@ -978,9 +978,102 @@ header .container nav .search i {
 	margin-left: 50px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
 	.subscribe .container p {
 		margin: 30px 0 0;
 	}
 }
 /* End subscribe */
+
+/* Start contact */
+.contact {
+	padding: var(--section-padding) 0;
+}
+
+.contact .container .contact-details {
+	display: flex;
+	justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+	.contact .container .contact-details {
+		flex-direction: column;
+	}
+}
+
+.contact .container .contact-details form {
+	flex-basis: 70%;
+}
+
+.contact .container .contact-details form input:not(:last-of-type),
+.contact .container .contact-details form textarea {
+	display: block;
+	width: 100%;
+	padding: 20px;
+	margin-bottom: 30px;
+	border: 1px solid #ccc;
+	caret-color: var(--main-color);
+	outline: none;
+}
+
+.contact .container .contact-details form textarea {
+	height: 200px;
+	resize: none;
+}
+
+.contact .container .contact-details form input:last-of-type {
+	color: #fff;
+	background-color: var(--main-color);
+	text-transform: uppercase;
+	display: block;
+	padding: 20px;
+	margin-left: auto;
+	cursor: pointer;
+	border: none;
+}
+
+.contact .container .contact-details .address {
+	flex-basis: 25%
+}
+
+@media (max-width: 767px) {
+	.contact .container .contact-details .address {
+		order: -1;
+		text-align: center;
+	}
+}
+
+.contact .container .contact-details .address h4 {
+	font-size: 18px;
+	font-weight: 500;
+	text-transform: uppercase;
+	margin-bottom: 30px;
+}
+
+.contact .container .contact-details .address h4:last-of-type {
+	margin-top: 90px;
+}
+
+@media (max-width: 767px) {
+	.contact .container .contact-details .address h4:last-of-type {
+		margin-top: 30px;
+	}
+}
+
+.contact .container .contact-details .address .phone {
+	color: #777;
+	display: block;
+	margin-bottom: 10px;
+}
+
+.contact .container .contact-details .address address {
+	color: #777;
+	line-height: var(--paragraph-line-height);
+}
+
+@media (max-width: 767px) {
+	.contact .container .contact-details .address address {
+		margin-bottom: 40px;
+	}
+}
+/* End contact */
