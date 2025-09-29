@@ -5,6 +5,7 @@
 	--paragraph-color: #777;
 	--paragraph-line-height: 2;
 	--section-padding: 100px;
+	--main-duration: .3s;
 }
 /* End variables */
 
@@ -403,5 +404,79 @@ header .container nav .search i {
 .design .text ul li {
 	padding: 15px 0;
 }
-
 /* End design */
+
+/* Start portfolio */
+.portfolio {
+	padding: var(--section-padding) 0;
+}
+
+.portfolio ul {
+	display: flex;
+	justify-content: center;
+}
+
+.portfolio ul li {
+	padding: 10px;
+}
+
+.portfolio ul li:first-of-type {
+	color: #fff;
+	background-color: var(--main-color);
+}
+
+.portfolio .gallery {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	margin-top: 60px;
+}
+
+.portfolio .gallery .box {
+	position: relative;
+	overflow: hidden;
+}
+
+.portfolio .gallery .box img {
+	max-width: 100%;
+	transition: var(--main-duration);
+}
+
+.portfolio .gallery .box:hover img {
+	transform: scale(1.1) rotate(3deg);
+}
+
+.portfolio .gallery .box .caption {
+	background-color: #fff;
+	position: absolute;
+	bottom: 0;
+	transform: translateY(100%);
+	padding: 20px;
+	width: 100%;
+	transition: var(--main-duration);
+}
+
+.portfolio .gallery .box:hover .caption {
+	transform: translateY(0);
+}
+
+.portfolio .gallery .box .caption h4 {
+	font-weight: normal;
+	margin-bottom: 10px;
+}
+
+.portfolio .gallery .box .caption p {
+	color: var(--main-color);
+}
+
+.portfolio a {
+	color: #fff;
+	background-color: var(--main-color);
+	display: block;
+	width: fit-content;
+	padding: 15px 20px;
+	margin: 30px auto;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+/* End portfolio */
